@@ -67,3 +67,22 @@ input[type="password"] {
 .icon.tick {
   color: #4caf50;
 }
+
+.strength {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.strength.weak {
+  color: #ff4d4f;
+}
+
+.strength.medium {
+  color: #ffc107;
+}
+
+.strength.strong {
+  color: #4caf50;
+}

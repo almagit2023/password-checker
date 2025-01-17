@@ -10,6 +10,8 @@ const criteria = {
   spaces: document.getElementById('spaces')
 };
 
+const strengthIndicator = document.getElementById('strength');
+
 passwordInput.addEventListener('input', () => {
   const password = passwordInput.value;
 
@@ -37,6 +39,7 @@ passwordInput.addEventListener('input', () => {
 
   // Check no spaces
   toggleValid(criteria.spaces, !/\s/.test(password));
+  updateStrength(password);
 });
 
 
@@ -45,6 +48,26 @@ function toggleValid(element, isValid) {
   const icon = element.querySelector('.icon');
   icon.textContent = isValid ? '\u2714' : '\u2716';
   icon.className = `icon ${isValid ? 'tick' : 'cross'}`;
+}
+
+function updateStrength(password) {
+  let validCount = 0;
+  for (const key in criteria) {
+    if (criteria[key].classList.contains('valid')) {
+      validCount++;
+    }
+  }
+
+  if (validCount <= 3) {
+    strengthIndicator.textContent = 'Password Strength: Weak';
+    strengthIndicator.className = 'strength weak';
+  } else if (validCount <= 6) {
+    strengthIndicator.textContent = 'Password Strength: Medium';
+    strengthIndicator.className = 'strength medium';
+  } else {
+    strengthIndicator.textContent = 'Password Strength: Strong';
+    strengthIndicator.className = 'strength strong';
+  }
 }
 
 document.getElementById('submit-password').addEventListener('click', () => {
