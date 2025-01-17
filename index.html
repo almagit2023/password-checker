@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Password Analyzer</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Password Analyzer</h1>
+    <div id="success-message" style="display: none; text-align: center; color: #4caf50; margin-bottom: 15px;">
+      Password successfully submitted!
+    </div>
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password" placeholder="Type your password">
+
+    <ul class="criteria">
+      <li id="length"><span class="icon cross">&#10060;</span><span>At least 8 characters</span></li>
+      <li id="uppercase"><span class="icon cross">&#10060;</span><span>At least 1 uppercase letter</span></li>
+      <li id="lowercase"><span class="icon cross">&#10060;</span><span>At least 1 lowercase letter</span></li>
+      <li id="number"><span class="icon cross">&#10060;</span><span>At least 1 number</span></li>
+      <li id="special"><span class="icon cross">&#10060;</span><span>At least 1 special character (!@#$%^&* etc.)</span>
+      </li>
+      <li id="sequence"><span class="icon cross">&#10060;</span><span>No repeated sequences (e.g., 123123)</span></li>
+      <li id="unique"><span class="icon cross">&#10060;</span><span>At least 4 unique characters</span></li>
+      <li id="spaces"><span class="icon cross">&#10060;</span><span>No spaces</span></li>
+      <li id="submit-container" style="margin-top: 20px;">
+        <button id="submit-password"
+          style="padding: 8px 16px; background-color: #4caf50; color: white; border: none; border-radius: 4px; cursor: pointer;">Submit
+          Password</button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

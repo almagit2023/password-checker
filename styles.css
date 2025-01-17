@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.criteria {
+  list-style: none;
+  padding: 0;
+}
+
+.criteria li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #ff4d4f;
+}
+
+.criteria li span {
+  margin-left: 8px;
+}
+
+.criteria li.valid {
+  color: #4caf50;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.icon.cross {
+  color: #ff4d4f;
+}
+
+.icon.tick {
+  color: #4caf50;
+}
